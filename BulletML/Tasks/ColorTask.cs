@@ -1,6 +1,6 @@
-﻿using BulletML.Enums;
+﻿using BulletML;
+using BulletML.Enums;
 using BulletML.Nodes;
-using Microsoft.Xna.Framework;
 using System.Diagnostics;
 
 namespace BulletML.Tasks

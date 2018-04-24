@@ -1,5 +1,4 @@
 ﻿using BulletML;
-using Microsoft.Xna.Framework;
 
 namespace Tests.Utils
 {

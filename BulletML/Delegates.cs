@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace BulletML
+﻿namespace BulletML
 {
     /// <summary>
     /// This is a callback method for getting a position

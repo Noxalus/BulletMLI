@@ -1,7 +1,7 @@
+using BulletML;
 using BulletML.Enums;
 using BulletML.Nodes;
 using BulletML.Tasks;
-using Microsoft.Xna.Framework;
 using NUnit.Framework;
 using Tests.Utils;
 
