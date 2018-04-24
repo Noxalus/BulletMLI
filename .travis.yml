@@ -1,7 +1,7 @@
 language: csharp
-solution: BulletML.sln
+solution: BulletMLI.sln
 install:
-  - nuget restore BulletML.sln
+  - nuget restore BulletMLI.sln
   - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release Tests/Tests.csproj
