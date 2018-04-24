@@ -88,13 +88,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BulletML\BulletML.csproj">
-      <Project>{b7092db7-57e9-455c-b974-cdc1e0f49518}</Project>
-      <Name>BulletML</Name>
-    </ProjectReference>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <ProjectReference Include="..\BulletMLI\BulletMLI.csproj">
+      <Project>{b7092db7-57e9-455c-b974-cdc1e0f49518}</Project>
+      <Name>BulletMLI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
