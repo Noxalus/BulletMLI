@@ -228,7 +228,7 @@ namespace BulletML
         /// Update this bullet.
         /// Called once every 1/60th of a second during runtime.
         /// </summary>
-        public virtual void Update()
+        public virtual void Update(float dt)
         {
             // Flag to tell whether or not this bullet has finished all its tasks
             foreach (var task in Tasks)
@@ -238,8 +238,8 @@ namespace BulletML
             var direction = new Vector2((float)(Math.Sin(Direction)), (float)(-Math.Cos(Direction)));
             var velocity = Acceleration + (direction * Speed);
 
-            X += velocity.X;
-            Y += velocity.Y;
+            X += velocity.X * dt * 60; // Based on 60 FPS
+            Y += velocity.Y * dt * 60; // Based on 60 FPS
         }
 
         /// <summary>
