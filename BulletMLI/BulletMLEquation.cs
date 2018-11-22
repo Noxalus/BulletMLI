@@ -30,7 +30,7 @@ namespace BulletML
         private double RandomValue()
         {
             // This value is "$rand", return a random number
-            return GameManager.RandomNextFloat(0f, 1f);
+            return Configuration.RandomNextFloat(0f, 1f);
         }
 
         private double GameDifficulty()
@@ -48,7 +48,7 @@ namespace BulletML
         private double RandomSign()
         {
             // This value is "$rand", return a random sign (-1 or 1)
-            return GameManager.RandomNextInt(0, 2) * 2 - 1;
+            return Configuration.RandomNextInt(0, 2) * 2 - 1;
         }
     }
 }

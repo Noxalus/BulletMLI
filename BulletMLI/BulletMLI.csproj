@@ -43,6 +43,7 @@
     <Compile Include="BulletMLEquation.cs" />
     <Compile Include="BulletPattern.cs" />
     <Compile Include="Color.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="Enums\AttributeName.cs" />
     <Compile Include="Enums\NodeName.cs" />
     <Compile Include="Enums\NodeType.cs" />
