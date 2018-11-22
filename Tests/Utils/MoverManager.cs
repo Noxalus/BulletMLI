@@ -45,13 +45,13 @@ namespace Tests.Utils
                 myMover.Used = false;
         }
 
-        public void Update()
+        public void Update(float dt)
         {
             for (int i = 0; i < Movers.Count; i++)
-                Movers[i].Update();
+                Movers[i].Update(dt);
 
             for (int i = 0; i < _topLevelMovers.Count; i++)
-                _topLevelMovers[i].Update();
+                _topLevelMovers[i].Update(dt);
 
             FreeMovers();
         }
