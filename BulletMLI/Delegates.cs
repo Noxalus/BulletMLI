@@ -15,9 +15,9 @@
     public delegate float FloatDelegate();
 
     /// <summary>
-    /// A method to generate a random float number between min (inclusive) and max (inclusive).
+    /// A method to generate a random float between 0 and 1.
     /// </summary>
-    public delegate float RandomNextFloat(float min, float max);
+    public delegate float RandomNextFloat();
 
     /// <summary>
     /// A method to generate a random integer number between min (inclusive) and max (exclusive).
