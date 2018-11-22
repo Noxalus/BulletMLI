@@ -118,7 +118,7 @@ namespace BulletML.Tasks
             GetScaleNodes(BulletTask);
             GetSpriteNodes(BulletTask);
 
-            _lastSetupDirection = bullet.Direction;
+            _lastSetupDirection = (Configuration.YUpAxis ? (float)Math.PI : 0) + bullet.Direction;
             _lastSetupSpeed = bullet.Speed;
             _lastSetupScale = bullet.Scale;
         }
