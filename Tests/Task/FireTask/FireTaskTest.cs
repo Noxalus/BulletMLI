@@ -319,7 +319,7 @@ namespace Tests.Task.FireTask
             Assert.AreEqual(1, mover.Tasks.Count);
             Assert.AreEqual(2, mover.Tasks[0].ChildTasks.Count);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(3, TestUtils.Manager.Movers.Count);
 

@@ -39,7 +39,7 @@ namespace Tests.Task
             mover.Acceleration = new Vector2(20.0f, 40.0f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(19.0f, mover.Acceleration.X);
             Assert.AreEqual(38.0f, mover.Acceleration.Y);
@@ -56,7 +56,7 @@ namespace Tests.Task
 
             for (int i = 0; i < 10; i++)
             {
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
             }
 
             Assert.AreEqual(10.0f, mover.Acceleration.X);
@@ -72,7 +72,7 @@ namespace Tests.Task
             mover.Acceleration = new Vector2(20.0f, 40.0f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(21.0f, mover.Acceleration.X);
             Assert.AreEqual(42.0f, mover.Acceleration.Y);
@@ -89,7 +89,7 @@ namespace Tests.Task
 
             for (int i = 0; i < 10; i++)
             {
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
             }
 
             Assert.AreEqual(30.0f, mover.Acceleration.X);
@@ -228,7 +228,7 @@ namespace Tests.Task
             mover.Acceleration = new Vector2(20.0f, 40.0f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(21.0f, mover.Acceleration.X);
             Assert.AreEqual(42.0f, mover.Acceleration.Y);
@@ -245,7 +245,7 @@ namespace Tests.Task
 
             for (int i = 0; i < 10; i++)
             {
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
             }
 
             Assert.AreEqual(30.0f, mover.Acceleration.X);

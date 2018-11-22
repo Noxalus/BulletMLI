@@ -22,7 +22,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(0, TestUtils.Manager.Movers.Count);
         }
@@ -36,7 +36,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(0, TestUtils.Manager.Movers.Count);
         }

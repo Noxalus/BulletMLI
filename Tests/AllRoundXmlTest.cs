@@ -198,7 +198,7 @@ namespace Tests
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             //there should be 11 bullets
             Assert.AreEqual(21, TestUtils.Manager.Movers.Count);

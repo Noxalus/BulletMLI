@@ -37,7 +37,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(45, (int)direction);
         }
@@ -51,8 +51,8 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             float direction = MathHelper.ToDegrees(mover.Direction);
 
@@ -68,14 +68,14 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(2, TestUtils.Manager.Movers.Count);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             var direction = MathHelper.ToDegrees(bullet.Direction);
@@ -105,7 +105,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(90, (int)direction);
@@ -120,12 +120,12 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var direction = mover.Direction * (180 / (float)Math.PI);
             Assert.AreEqual(90, (int)direction);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             direction = mover.Direction * (180 / (float)Math.PI);
             Assert.AreEqual(180, (int)direction);
@@ -151,7 +151,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(-45, (int)direction);
         }
@@ -164,8 +164,8 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(-90, (int)direction);
@@ -191,7 +191,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(90, (int)direction);
         }
@@ -204,8 +204,8 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
             float direction = mover.Direction * 180 / (float)Math.PI;
             Assert.AreEqual(180, (int)direction);
         }
@@ -219,7 +219,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var targetMover = TestUtils.Manager.Movers[1];
 

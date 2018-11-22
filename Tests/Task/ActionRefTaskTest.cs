@@ -21,7 +21,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(2, TestUtils.Manager.Movers.Count);
 
@@ -38,7 +38,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(2, TestUtils.Manager.Movers.Count);
 
@@ -46,7 +46,7 @@ namespace Tests.Task
             Assert.AreEqual("test", mover.Label);
             Assert.AreEqual(5.0f, mover.Speed);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(10.0f, mover.Speed);
         }

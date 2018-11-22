@@ -35,7 +35,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             for (var i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             Assert.AreEqual(10, mover.Speed);
         }
@@ -49,7 +49,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(1, mover.Speed);
         }
@@ -64,7 +64,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             for (var i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             for (var i = 0; i < 10; i++)
             {
@@ -87,7 +87,7 @@ namespace Tests.Task
             float expectedBulletNumber = (3 * 3) + 1;
 
             for (var i = 0; i < expectedBulletNumber; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             Assert.AreEqual(expectedBulletNumber, TestUtils.Manager.Movers.Count);
 
@@ -107,7 +107,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             //there should be 20 bullets
             Assert.AreEqual(20, TestUtils.Manager.Movers.Count);
@@ -120,7 +120,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(TestUtils.Manager.Movers[0].Speed, 1);
         }
@@ -132,7 +132,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(TestUtils.Manager.Movers[1].Speed, 2);
         }
@@ -144,7 +144,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(TestUtils.Manager.Movers[0].Speed, 1);
             Assert.AreEqual(TestUtils.Manager.Movers[1].Speed, 2);
@@ -165,7 +165,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             for (int i = 0; i < 9; i++)
             {
@@ -182,7 +182,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(11f, TestUtils.Manager.Movers[10].Speed);
         }
@@ -194,7 +194,7 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(12f, TestUtils.Manager.Movers[11].Speed);
         }
@@ -208,7 +208,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             for (int i = 0; i < 20; i++)
             {

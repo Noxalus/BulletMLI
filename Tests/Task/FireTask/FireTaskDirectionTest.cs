@@ -27,7 +27,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -44,7 +44,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -62,7 +62,7 @@ namespace Tests.Task.FireTask
             mover.Direction = MathHelper.ToRadians(100.0f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             var direction = MathHelper.ToDegrees(bullet.Direction);
@@ -82,7 +82,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -102,7 +102,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -119,7 +119,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[2];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -136,7 +136,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[2];
             float direction = MathHelper.ToDegrees(bullet.Direction);
@@ -153,7 +153,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
             float direction = MathHelper.ToDegrees(bullet.Direction);

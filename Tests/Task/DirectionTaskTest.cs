@@ -37,7 +37,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             Assert.AreEqual(2, TestUtils.Manager.Movers.Count);
         }
 
@@ -54,7 +54,7 @@ namespace Tests.Task
             //run the thing ten times
             for (int i = 2; i < 12; i++)
             {
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
                 Assert.AreEqual(i, TestUtils.Manager.Movers.Count);
             }
 
@@ -76,7 +76,7 @@ namespace Tests.Task
 
             // Run the engine ten times
             for (var i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             for (var i = 1; i < TestUtils.Manager.Movers.Count; i++)
             {
@@ -191,7 +191,7 @@ namespace Tests.Task
 
             // Run the engine ten times
             for (var i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             // Check the top bullet
             var bullet = TestUtils.Manager.Movers[0];
@@ -216,7 +216,7 @@ namespace Tests.Task
 
             // Run the engine ten times
             for (int i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             for (int i = 1; i < TestUtils.Manager.Movers.Count; i++)
             {

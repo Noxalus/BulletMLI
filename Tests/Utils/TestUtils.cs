@@ -18,6 +18,11 @@ namespace Tests.Utils
             Pattern = new BulletPattern();
         }
 
+        public static void MoverManagerStep()
+        {
+            Manager.Update(0.016f);
+        }
+
         public static string GetFilePath(string file)
         {
             var dllPathUri = new Uri(Assembly.GetExecutingAssembly().GetName().CodeBase);

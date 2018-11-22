@@ -26,7 +26,7 @@ namespace Tests.Task.FireTask
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             mover.Speed = 100;
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(TestUtils.Manager.Movers.Count, 2);
         }
@@ -81,7 +81,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -98,7 +98,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -114,7 +114,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             mover.Speed = 100;
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -130,7 +130,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var myTask = mover.Tasks[0];
             var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
@@ -149,7 +149,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -166,7 +166,7 @@ namespace Tests.Task.FireTask
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             mover.Speed = 100;
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -237,7 +237,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var testDude = TestUtils.Manager.Movers[1];
 
@@ -254,7 +254,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -271,7 +271,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
 
@@ -287,7 +287,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             // Test the second bullet
             var bullet = TestUtils.Manager.Movers[1];
@@ -304,7 +304,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(3, TestUtils.Manager.Movers.Count);
         }
@@ -318,7 +318,7 @@ namespace Tests.Task.FireTask
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             // Test the second bullet
             var bullet = TestUtils.Manager.Movers[2];

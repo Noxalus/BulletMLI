@@ -34,7 +34,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(1, TestUtils.Manager.Movers.Count);
         }
@@ -48,8 +48,8 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(0, TestUtils.Manager.Movers.Count);
         }
@@ -63,7 +63,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(0, TestUtils.Manager.Movers.Count);
         }
@@ -89,7 +89,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(1, TestUtils.Manager.Movers.Count);
         }
@@ -103,8 +103,8 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(1, TestUtils.Manager.Movers.Count);
         }
@@ -117,9 +117,9 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(0, TestUtils.Manager.Movers.Count);
         }

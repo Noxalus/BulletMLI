@@ -31,7 +31,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
 
             Assert.AreEqual(1, mover.Speed);
         }
@@ -48,11 +48,11 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             Assert.AreEqual(110, mover.Speed);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             Assert.AreEqual(100, mover.Speed);
 
             for (int i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             Assert.AreEqual(10, mover.Speed);
         }
@@ -68,11 +68,11 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             Assert.AreEqual(100, mover.Speed);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             Assert.AreEqual(101, mover.Speed);
 
             for (int i = 0; i < 10; i++)
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
 
             Assert.AreEqual(110, mover.Speed);
         }
@@ -87,12 +87,12 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             Assert.AreEqual(100, mover.Speed);
-            TestUtils.Manager.Update();
+            TestUtils.MoverManagerStep();
             Assert.AreEqual(110, mover.Speed);
 
             for (int i = 0; i < 10; i++)
             {
-                TestUtils.Manager.Update();
+                TestUtils.MoverManagerStep();
             }
 
             Assert.AreEqual(200, mover.Speed);

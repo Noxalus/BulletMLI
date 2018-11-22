@@ -235,7 +235,7 @@ namespace BulletML
                 task.Run(this);
 
             // Only do this if the bullet isn't done, sin/cos really are expensive
-            var direction = new Vector2((float)(Math.Sin(Direction)), (float)(-Math.Cos(Direction)));
+            var direction = new Vector2((float)Math.Sin(Direction), (float)-Math.Cos(Direction));
             var velocity = Acceleration + (direction * Speed);
 
             X += velocity.X * dt * 60; // Based on 60 FPS
