@@ -142,7 +142,7 @@ namespace BulletML.Tasks
                     case NodeType.absolute:
                         {
                             // The new bullet points right at a particular direction
-                            FireDirection = newBulletDirection;
+                            FireDirection = (Configuration.YUpAxis ? (float)Math.PI : 0) + newBulletDirection;
                         }
                         break;
 
