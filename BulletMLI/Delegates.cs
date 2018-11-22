@@ -13,4 +13,14 @@
     /// </summary>
     /// <returns>Get a float from somewhere.</returns>
     public delegate float FloatDelegate();
+
+    /// <summary>
+    /// A method to generate a random float number between min (inclusive) and max (inclusive).
+    /// </summary>
+    public delegate float RandomNextFloat(float min, float max);
+
+    /// <summary>
+    /// A method to generate a random integer number between min (inclusive) and max (exclusive).
+    /// </summary>
+    public delegate int RandomNextInt(int min, int max);
 }

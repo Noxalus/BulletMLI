@@ -10,5 +10,8 @@ namespace BulletML
         /// You need to set this at the start of the game.
         /// </summary>
         public static FloatDelegate GameDifficulty;
+
+        public static RandomNextFloat RandomNextFloat;
+        public static RandomNextInt RandomNextInt;
     }
 }
