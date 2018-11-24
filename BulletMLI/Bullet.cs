@@ -235,7 +235,9 @@ namespace BulletML
                 task.Run(this);
 
             // Only do this if the bullet isn't done, sin/cos really are expensive
-            var direction = new Vector2((float)Math.Sin(Direction), (float)-Math.Cos(Direction));
+            // Sin for X axis and Cos for Y axis means that the trigonometric 
+            // circle is rotated to have the 0° that points to the Y-up axis
+            var direction = new Vector2((float)Math.Sin(Direction), (float)Math.Cos(Direction));
             var velocity = Acceleration + (direction * Speed);
 
             X += velocity.X * dt * 60; // Based on 60 FPS
@@ -252,7 +254,7 @@ namespace BulletML
 
             var playerPosition = BulletManager.PlayerPosition(this);
 
-            return (float)Math.Atan2((playerPosition.X - X), -(playerPosition.Y - Y));
+            return (float)Math.Atan2((playerPosition.X - X), (playerPosition.Y - Y));
         }
 
         /// <summary>
