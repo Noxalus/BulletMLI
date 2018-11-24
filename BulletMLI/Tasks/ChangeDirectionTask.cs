@@ -93,7 +93,7 @@ namespace BulletML.Tasks
                 case NodeType.absolute:
                     {
                         // We are going to go in the direction we are given, regardless of where we are pointing right now
-                        direction = (Configuration.YUpAxis ? (float)Math.PI : 0) + _nodeDirection - bullet.Direction;
+                        direction = (Configuration.YUpAxis ? 180f : 0) + _nodeDirection - bullet.Direction;
                     }
                     break;
 
