@@ -19,7 +19,7 @@ namespace BulletML
         /// The direction this bullet is travelling.
         /// Measured as an angle in radians.
         /// </summary>
-        private float _direction;
+        private float _rotation;
 
         /// <summary>
         /// The bullet manager that manages this bullet.
@@ -49,13 +49,9 @@ namespace BulletML
         /// Gets or sets the direction.
         /// </summary>
         /// <value>The direction in radians.</value>
-        public virtual float Direction
-        {
-            get { return _direction; }
-            set
-            {
-                _direction = value;
-            }
+        public virtual float Rotation { 
+            get { return _rotation; }
+            set { _rotation = value; }
         }
 
         /// <summary>
@@ -137,6 +133,7 @@ namespace BulletML
             Tasks = new List<BulletMLTask>();
             Color = Color.White;
             Scale = 1f;
+            Rotation = 0f;
         }
 
         /// <summary>
@@ -236,12 +233,19 @@ namespace BulletML
 
             // Only do this if the bullet isn't done, sin/cos really are expensive
             // Sin for X axis and Cos for Y axis means that the trigonometric 
-            // circle is rotated to have the 0° that points to the Y-up axis
-            var direction = new Vector2((float)Math.Sin(Direction), (float)Math.Cos(Direction));
+            // circle is rotated to have the 0° that points to the Y-up or Y-down axis
+            var direction = Vector2.Zero;
+
+            if (Configuration.YUpAxis)
+                direction = new Vector2((float)Math.Sin(-Rotation), (float)Math.Cos(-Rotation));
+            else
+                direction = new Vector2((float)Math.Sin(Rotation), (float)-Math.Cos(Rotation));
+
             var velocity = Acceleration + (direction * Speed);
 
-            X += velocity.X * dt * 60; // Based on 60 FPS
-            Y += velocity.Y * dt * 60; // Based on 60 FPS
+            // Based on 60 FPS
+            X += velocity.X * dt * 60;
+            Y += velocity.Y * dt * 60;
         }
 
         /// <summary>
@@ -254,7 +258,10 @@ namespace BulletML
 
             var playerPosition = BulletManager.PlayerPosition(this);
 
-            return (float)Math.Atan2((playerPosition.X - X), (playerPosition.Y - Y));
+            if (Configuration.YUpAxis)
+                return (float)Math.Atan2(-(playerPosition.X - X), playerPosition.Y - Y);
+            else
+                return (float)Math.Atan2(playerPosition.X - X, -(playerPosition.Y - Y));
         }
 
         /// <summary>

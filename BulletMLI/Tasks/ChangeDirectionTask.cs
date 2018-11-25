@@ -93,7 +93,7 @@ namespace BulletML.Tasks
                 case NodeType.absolute:
                     {
                         // We are going to go in the direction we are given, regardless of where we are pointing right now
-                        direction = (Configuration.YUpAxis ? 180f : 0) + _nodeDirection - bullet.Direction;
+                        direction = _nodeDirection - bullet.Rotation;
                     }
                     break;
 
@@ -107,7 +107,7 @@ namespace BulletML.Tasks
                 default:
                     {
                         // The direction change is to aim at the enemy
-                        direction = (bullet.GetAimDirection() + _nodeDirection) - bullet.Direction;
+                        direction = (bullet.GetAimDirection() + _nodeDirection) - bullet.Rotation;
                     }
                     break;
             }
@@ -134,7 +134,7 @@ namespace BulletML.Tasks
                 _nextDirection = GetDirection(bullet);
             }
 
-            bullet.Direction += _nextDirection;
+            bullet.Rotation += _nextDirection;
             Duration--;
 
             // Decrement the amount if time left to run and return End when this task is finished

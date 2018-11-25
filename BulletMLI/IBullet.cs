@@ -39,7 +39,7 @@ namespace BulletML
         /// Gets or sets the bullet's direction.
         /// </summary>
         /// <value>The direction in radians.</value>
-        float Direction { get; set; }
+        float Rotation { get; set; }
 
         /// <summary>
         /// Gets or sets the bullet's sprite index.

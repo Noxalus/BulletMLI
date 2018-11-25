@@ -118,7 +118,7 @@ namespace BulletML.Tasks
             GetScaleNodes(BulletTask);
             GetSpriteNodes(BulletTask);
 
-            _lastSetupDirection = (Configuration.YUpAxis ? (float)Math.PI : 0) + bullet.Direction;
+            _lastSetupDirection = bullet.Rotation;
             _lastSetupSpeed = bullet.Speed;
             _lastSetupScale = bullet.Scale;
         }
@@ -135,21 +135,21 @@ namespace BulletML.Tasks
             if (DirectionTask != null)
             {
                 // Set the fire direction to the "initial" value
-                var newBulletDirection = DirectionTask.GetNodeValue(bullet);
+                var newBulletDirection = (Configuration.YUpAxis ? -1 : 1) * DirectionTask.GetNodeValue(bullet);
 
                 switch (DirectionTask.Node.NodeType)
                 {
                     case NodeType.absolute:
                         {
                             // The new bullet points right at a particular direction
-                            FireDirection = (Configuration.YUpAxis ? 180f : 0) + newBulletDirection;
+                            FireDirection = newBulletDirection;
                         }
                         break;
 
                     case NodeType.relative:
                         {
                             // The new bullet's direction will be relative to the old bullet's one
-                            FireDirection = MathHelper.ToDegrees(bullet.Direction) + newBulletDirection;
+                            FireDirection = MathHelper.ToDegrees(bullet.Rotation) + newBulletDirection;
                         }
                         break;
 
@@ -289,7 +289,7 @@ namespace BulletML.Tasks
             newBullet.Y = bullet.Y;
 
             // Set the new bullet's direction
-            newBullet.Direction = FireDirection;
+            newBullet.Rotation = FireDirection;
 
             // Set the new bullet's speed
             newBullet.Speed = FireSpeed;
