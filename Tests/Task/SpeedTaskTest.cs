@@ -172,7 +172,7 @@ namespace Tests.Task
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
-            Assert.AreEqual(5.0f, speedNode.GetValue(speedTask));
+            Assert.AreEqual(5f, speedNode.GetValue(speedTask));
         }
 
         [Test]
@@ -185,7 +185,7 @@ namespace Tests.Task
             BulletMLTask myTask = mover.Tasks[0];
             BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
 
-            Assert.AreEqual(5.0f, testTask.FireSpeed);
+            Assert.AreEqual(5f, testTask.FireSpeed);
         }
 
         [Test]
@@ -198,7 +198,7 @@ namespace Tests.Task
             BulletMLTask myTask = mover.Tasks[0];
             BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
 
-            Assert.AreEqual(5.0f, testTask.FireSpeed);
+            Assert.AreEqual(5f, testTask.FireSpeed);
         }
 
         [Test]
@@ -282,7 +282,7 @@ namespace Tests.Task
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
-            Assert.AreEqual(10.0f, speedNode.GetValue(speedTask));
+            Assert.AreEqual(10f, speedNode.GetValue(speedTask));
         }
 
         [Test]
@@ -295,7 +295,7 @@ namespace Tests.Task
             BulletMLTask myTask = mover.Tasks[0];
             BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
 
-            Assert.AreEqual(10.0f, testTask.FireSpeed);
+            Assert.AreEqual(10f, testTask.FireSpeed);
         }
     }
 }

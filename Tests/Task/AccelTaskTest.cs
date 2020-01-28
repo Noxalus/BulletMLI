@@ -23,10 +23,10 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelAbs.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            Assert.AreEqual(20.0f, mover.Acceleration.X);
-            Assert.AreEqual(40.0f, mover.Acceleration.Y);
+            Assert.AreEqual(20f, mover.Acceleration.X);
+            Assert.AreEqual(40f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -36,13 +36,13 @@ namespace Tests.Task
             TestUtils.Pattern.Parse(filename);
 
             var mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             TestUtils.MoverManagerStep();
 
-            Assert.AreEqual(19.0f, mover.Acceleration.X);
-            Assert.AreEqual(38.0f, mover.Acceleration.Y);
+            Assert.AreEqual(19f, mover.Acceleration.X);
+            Assert.AreEqual(38f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -51,7 +51,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelAbs.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             for (int i = 0; i < 10; i++)
@@ -59,8 +59,8 @@ namespace Tests.Task
                 TestUtils.MoverManagerStep();
             }
 
-            Assert.AreEqual(10.0f, mover.Acceleration.X);
-            Assert.AreEqual(20.0f, mover.Acceleration.Y);
+            Assert.AreEqual(10f, mover.Acceleration.X);
+            Assert.AreEqual(20f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -69,13 +69,13 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             TestUtils.MoverManagerStep();
 
-            Assert.AreEqual(21.0f, mover.Acceleration.X);
-            Assert.AreEqual(42.0f, mover.Acceleration.Y);
+            Assert.AreEqual(21f, mover.Acceleration.X);
+            Assert.AreEqual(42f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             for (int i = 0; i < 10; i++)
@@ -92,8 +92,8 @@ namespace Tests.Task
                 TestUtils.MoverManagerStep();
             }
 
-            Assert.AreEqual(30.0f, mover.Acceleration.X);
-            Assert.AreEqual(60.0f, mover.Acceleration.Y);
+            Assert.AreEqual(30f, mover.Acceleration.X);
+            Assert.AreEqual(60f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             BulletMLTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel);
@@ -115,7 +115,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
@@ -128,12 +128,12 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
-            Assert.AreEqual(1.0f, myTask.Acceleration.X);
-            Assert.AreEqual(2.0f, myTask.Acceleration.Y);
+            Assert.AreEqual(1f, myTask.Acceleration.X);
+            Assert.AreEqual(2f, myTask.Acceleration.Y);
         }
 
         [Test]
@@ -142,12 +142,12 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
             BulletMLNode myNode = myTask.Node.GetChild(NodeName.horizontal);
-            Assert.AreEqual(10.0f, myNode.GetValue(myTask));
+            Assert.AreEqual(10f, myNode.GetValue(myTask));
         }
 
         [Test]
@@ -156,7 +156,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
@@ -170,7 +170,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
@@ -184,12 +184,12 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
             BulletMLNode myNode = myTask.Node.GetChild(NodeName.vertical);
-            Assert.AreEqual(20.0f, myNode.GetValue(myTask));
+            Assert.AreEqual(20f, myNode.GetValue(myTask));
         }
 
         [Test]
@@ -198,11 +198,11 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelRel.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
-            Assert.AreEqual(10.0f, myTask.Duration);
+            Assert.AreEqual(10f, myTask.Duration);
         }
 
         [Test]
@@ -211,12 +211,12 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelSeq.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             AccelTask myTask = mover.FindTaskByLabelAndName("test", NodeName.accel) as AccelTask;
-            Assert.AreEqual(1.0f, myTask.Acceleration.X);
-            Assert.AreEqual(2.0f, myTask.Acceleration.Y);
+            Assert.AreEqual(1f, myTask.Acceleration.X);
+            Assert.AreEqual(2f, myTask.Acceleration.Y);
         }
 
         [Test]
@@ -225,13 +225,13 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelSeq.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             TestUtils.MoverManagerStep();
 
-            Assert.AreEqual(21.0f, mover.Acceleration.X);
-            Assert.AreEqual(42.0f, mover.Acceleration.Y);
+            Assert.AreEqual(21f, mover.Acceleration.X);
+            Assert.AreEqual(42f, mover.Acceleration.Y);
         }
 
         [Test]
@@ -240,7 +240,7 @@ namespace Tests.Task
             var filename = TestUtils.GetFilePath(@"Content\AccelSeq.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Acceleration = new Vector2(20.0f, 40.0f);
+            mover.Acceleration = new Vector2(20f, 40f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             for (int i = 0; i < 10; i++)
@@ -248,8 +248,8 @@ namespace Tests.Task
                 TestUtils.MoverManagerStep();
             }
 
-            Assert.AreEqual(30.0f, mover.Acceleration.X);
-            Assert.AreEqual(60.0f, mover.Acceleration.Y);
+            Assert.AreEqual(30f, mover.Acceleration.X);
+            Assert.AreEqual(60f, mover.Acceleration.Y);
         }
     }
 }

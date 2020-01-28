@@ -320,7 +320,7 @@ namespace BulletML.Tasks
                 else
                 {
                     //got to the top of the list...this means not enough params were passed into the ref
-                    return 0.0f;
+                    return 0f;
                 }
             }
 

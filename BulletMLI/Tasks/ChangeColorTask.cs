@@ -51,7 +51,7 @@ namespace BulletML.Tasks
 
             // Check for divide by 0
             if (Math.Abs(Duration) < float.Epsilon)
-                Duration = 1.0f;
+                Duration = 1f;
 
             _initialDuration = Duration;
 

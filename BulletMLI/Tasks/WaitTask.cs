@@ -51,7 +51,7 @@ namespace BulletML.Tasks
         {
             Duration--;
 
-            if (Duration >= 0.0f)
+            if (Duration >= 0f)
                 return TaskRunStatus.Stop;
 
             Finished = true;

@@ -199,7 +199,7 @@ namespace BulletML
         /// Constructs an RGBA color from color and alpha value.
         /// </summary>
         /// <param name="color">A <see cref="Color"/> for RGB values of new <see cref="Color"/> instance.</param>
-        /// <param name="alpha">Alpha component value from 0.0f to 1.0f.</param>
+        /// <param name="alpha">Alpha component value from 0f to 1f.</param>
         public Color(Color color, float alpha) :
             this(color, (int)(alpha * 255))
         {
@@ -208,9 +208,9 @@ namespace BulletML
         /// <summary>
         /// Constructs an RGBA color from scalars representing red, green and blue values. Alpha value will be opaque.
         /// </summary>
-        /// <param name="r">Red component value from 0.0f to 1.0f.</param>
-        /// <param name="g">Green component value from 0.0f to 1.0f.</param>
-        /// <param name="b">Blue component value from 0.0f to 1.0f.</param>
+        /// <param name="r">Red component value from 0f to 1f.</param>
+        /// <param name="g">Green component value from 0f to 1f.</param>
+        /// <param name="b">Blue component value from 0f to 1f.</param>
         public Color(float r, float g, float b)
             : this((int)(r * 255), (int)(g * 255), (int)(b * 255))
         {
@@ -219,10 +219,10 @@ namespace BulletML
         /// <summary>
         /// Constructs an RGBA color from scalars representing red, green, blue and alpha values.
         /// </summary>
-        /// <param name="r">Red component value from 0.0f to 1.0f.</param>
-        /// <param name="g">Green component value from 0.0f to 1.0f.</param>
-        /// <param name="b">Blue component value from 0.0f to 1.0f.</param>
-        /// <param name="alpha">Alpha component value from 0.0f to 1.0f.</param>
+        /// <param name="r">Red component value from 0f to 1f.</param>
+        /// <param name="g">Green component value from 0f to 1f.</param>
+        /// <param name="b">Blue component value from 0f to 1f.</param>
+        /// <param name="alpha">Alpha component value from 0f to 1f.</param>
         public Color(float r, float g, float b, float alpha)
             : this((int)(r * 255), (int)(g * 255), (int)(b * 255), (int)(alpha * 255))
         {

@@ -62,7 +62,7 @@ namespace BulletML.Tasks
 
             // Check for divide by 0
             if (Math.Abs(Duration) < float.Epsilon)
-                Duration = 1.0f;
+                Duration = 1f;
 
             // Get the amount to change direction from the nodes
             var directionNode = Node.GetChild(NodeName.direction) as DirectionNode;

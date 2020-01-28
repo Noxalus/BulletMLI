@@ -18,8 +18,8 @@ namespace Tests.Task.FireTask
         [Test]
         public void IgnoreSequenceInitSpeed()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireDirectionSequence.xml");
             TestUtils.Pattern.Parse(filename);
@@ -30,7 +30,7 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
             Assert.AreEqual(10f, direction);
         }
@@ -47,9 +47,9 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(10.0f, direction);
+            Assert.AreEqual(10f, direction);
         }
 
         [Test]
@@ -59,13 +59,13 @@ namespace Tests.Task.FireTask
             TestUtils.Pattern.Parse(filename);
 
             var mover = (Mover)TestUtils.Manager.CreateBullet();
-            mover.Direction = MathHelper.ToRadians(100.0f);
+            mover.Rotation = MathHelper.ToRadians(100f);
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            var direction = MathHelper.ToDegrees(bullet.Direction);
+            var direction = MathHelper.ToDegrees(bullet.Rotation);
 
             Assert.AreEqual(110f, direction);
         }
@@ -73,8 +73,8 @@ namespace Tests.Task.FireTask
         [Test]
         public void FireAimDirection()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireDirectionAim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -85,16 +85,16 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(direction, 90.0f);
+            Assert.AreEqual(direction, 90f);
         }
 
         [Test]
         public void FireDefaultDirection()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireDirection.xml");
             TestUtils.Pattern.Parse(filename);
@@ -105,9 +105,9 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(100.0f, direction, 0.0001f);
+            Assert.AreEqual(100f, direction, 0.0001f);
         }
 
         [Test]
@@ -122,9 +122,9 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[2];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(20.0f, direction);
+            Assert.AreEqual(20f, direction);
         }
 
         [Test]
@@ -139,9 +139,9 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[2];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(20.0f, direction);
+            Assert.AreEqual(20f, direction);
         }
 
         [Test]
@@ -156,9 +156,9 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var bullet = TestUtils.Manager.Movers[1];
-            float direction = MathHelper.ToDegrees(bullet.Direction);
+            float direction = MathHelper.ToDegrees(bullet.Rotation);
 
-            Assert.AreEqual(10.0f, direction);
+            Assert.AreEqual(10f, direction);
         }
     }
 }

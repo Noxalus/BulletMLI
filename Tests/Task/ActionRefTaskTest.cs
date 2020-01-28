@@ -44,11 +44,11 @@ namespace Tests.Task
 
             mover = TestUtils.Manager.Movers[1];
             Assert.AreEqual("test", mover.Label);
-            Assert.AreEqual(5.0f, mover.Speed);
+            Assert.AreEqual(5f, mover.Speed);
 
             TestUtils.MoverManagerStep();
 
-            Assert.AreEqual(10.0f, mover.Speed);
+            Assert.AreEqual(10f, mover.Speed);
         }
     }
 }

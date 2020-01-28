@@ -63,9 +63,9 @@ namespace BulletML.Tasks
             Duration = Node.GetChildValue(NodeName.term, this, bullet);
 
             //check for divide by 0
-            if (0.0f == Duration)
+            if (0f == Duration)
             {
-                Duration = 1.0f;
+                Duration = 1f;
             }
 
             //Get the horizontal node
@@ -142,7 +142,7 @@ namespace BulletML.Tasks
 
             // Decrement the amount if time left to run and return End when this task is finished
             Duration--;
-            if (Duration <= 0.0f)
+            if (Duration <= 0f)
             {
                 Finished = true;
                 return TaskRunStatus.End;

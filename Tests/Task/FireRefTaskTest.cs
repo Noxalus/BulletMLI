@@ -45,7 +45,7 @@ namespace Tests.Task
 
             mover = TestUtils.Manager.Movers[1];
             Assert.AreEqual("testBullet", mover.Label);
-            Assert.AreEqual(15.0f, mover.Speed);
+            Assert.AreEqual(15f, mover.Speed);
         }
     }
 }

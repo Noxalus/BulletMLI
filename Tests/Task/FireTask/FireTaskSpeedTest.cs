@@ -56,7 +56,7 @@ namespace Tests.Task.FireTask
 
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
-            mover.Speed = 100.0f;
+            mover.Speed = 100f;
 
             var myTask = mover.Tasks[0];
             var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
@@ -68,7 +68,7 @@ namespace Tests.Task.FireTask
 
             Assert.IsNull(fireTask2.SpeedTask);
             Assert.IsNull(fireTask2.DirectionTask);
-            Assert.AreEqual(100.0f, fireTask2.FireSpeed);
+            Assert.AreEqual(100f, fireTask2.FireSpeed);
         }
 
         [Test]
@@ -85,7 +85,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(100.0f, bullet.Speed);
+            Assert.AreEqual(100f, bullet.Speed);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(5.0f, bullet.Speed);
+            Assert.AreEqual(5f, bullet.Speed);
         }
 
         [Test]
@@ -118,7 +118,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(5.0f, bullet.Speed);
+            Assert.AreEqual(5f, bullet.Speed);
         }
 
         [Test]
@@ -136,7 +136,7 @@ namespace Tests.Task.FireTask
             var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
-            Assert.AreEqual(105.0f, fireTask.FireSpeed);
+            Assert.AreEqual(105f, fireTask.FireSpeed);
         }
 
         [Test]
@@ -153,7 +153,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(105.0f, bullet.Speed);
+            Assert.AreEqual(105f, bullet.Speed);
         }
 
         [Test]
@@ -170,7 +170,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(5.0f, bullet.Speed);
+            Assert.AreEqual(5f, bullet.Speed);
         }
 
         [Test]
@@ -206,8 +206,8 @@ namespace Tests.Task.FireTask
             Assert.IsNotNull(fireTask);
             Assert.IsNotNull(fireTask.SpeedTask);
             Assert.AreEqual(NodeType.sequence, fireTask.SpeedTask.Node.NodeType);
-            Assert.AreEqual(100.0f, mover.Speed);
-            Assert.AreEqual(5.0f, fireTask.SpeedTask.Node.GetValue(fireTask));
+            Assert.AreEqual(100f, mover.Speed);
+            Assert.AreEqual(5f, fireTask.SpeedTask.Node.GetValue(fireTask));
         }
 
         [Test]
@@ -258,7 +258,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(5.0f, bullet.Speed);
+            Assert.AreEqual(5f, bullet.Speed);
         }
 
         [Test]
@@ -275,7 +275,7 @@ namespace Tests.Task.FireTask
 
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(105.0f, bullet.Speed);
+            Assert.AreEqual(105f, bullet.Speed);
         }
 
         [Test]
@@ -292,7 +292,7 @@ namespace Tests.Task.FireTask
             // Test the second bullet
             var bullet = TestUtils.Manager.Movers[1];
 
-            Assert.AreEqual(10.0f, bullet.Speed);
+            Assert.AreEqual(10f, bullet.Speed);
         }
 
         [Test]
@@ -323,7 +323,7 @@ namespace Tests.Task.FireTask
             // Test the second bullet
             var bullet = TestUtils.Manager.Movers[2];
 
-            Assert.AreEqual(20.0f, bullet.Speed);
+            Assert.AreEqual(20f, bullet.Speed);
         }
     }
 }

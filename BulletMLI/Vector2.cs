@@ -573,7 +573,7 @@ namespace BulletML
         /// </summary>
         public void Normalize()
         {
-            float val = 1.0f / (float)Math.Sqrt((X * X) + (Y * Y));
+            float val = 1f / (float)Math.Sqrt((X * X) + (Y * Y));
             X *= val;
             Y *= val;
         }
@@ -585,7 +585,7 @@ namespace BulletML
         /// <returns>Unit vector.</returns>
         public static Vector2 Normalize(Vector2 value)
         {
-            float val = 1.0f / (float)Math.Sqrt((value.X * value.X) + (value.Y * value.Y));
+            float val = 1f / (float)Math.Sqrt((value.X * value.X) + (value.Y * value.Y));
             value.X *= val;
             value.Y *= val;
             return value;
@@ -598,7 +598,7 @@ namespace BulletML
         /// <param name="result">Unit vector as an output parameter.</param>
         public static void Normalize(ref Vector2 value, out Vector2 result)
         {
-            float val = 1.0f / (float)Math.Sqrt((value.X * value.X) + (value.Y * value.Y));
+            float val = 1f / (float)Math.Sqrt((value.X * value.X) + (value.Y * value.Y));
             result.X = value.X * val;
             result.Y = value.Y * val;
         }
@@ -612,7 +612,7 @@ namespace BulletML
         public static Vector2 Reflect(Vector2 vector, Vector2 normal)
         {
             Vector2 result;
-            float val = 2.0f * ((vector.X * normal.X) + (vector.Y * normal.Y));
+            float val = 2f * ((vector.X * normal.X) + (vector.Y * normal.Y));
             result.X = vector.X - (normal.X * val);
             result.Y = vector.Y - (normal.Y * val);
             return result;
@@ -626,7 +626,7 @@ namespace BulletML
         /// <param name="result">Reflected vector as an output parameter.</param>
         public static void Reflect(ref Vector2 vector, ref Vector2 normal, out Vector2 result)
         {
-            float val = 2.0f * ((vector.X * normal.X) + (vector.Y * normal.Y));
+            float val = 2f * ((vector.X * normal.X) + (vector.Y * normal.Y));
             result.X = vector.X - (normal.X * val);
             result.Y = vector.Y - (normal.Y * val);
         }

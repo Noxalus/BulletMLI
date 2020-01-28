@@ -145,13 +145,13 @@ namespace Tests.Task.FireTask
 
             Assert.IsNotNull(fireTask);
             float direction = MathHelper.ToDegrees(fireTask.FireDirection);
-            Assert.AreEqual(direction, 180.0f);
+            Assert.AreEqual(direction, 180f);
         }
 
         [Test]
         public void FireDirectionInitCorrect1()
         {
-            TestUtils.Player.Position.Y = -100.0f;
+            TestUtils.Player.Position.Y = -100f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireActionEmpty.xml");
             var pattern = new BulletPattern();
@@ -165,14 +165,14 @@ namespace Tests.Task.FireTask
 
             Assert.IsNotNull(fireTask);
             float direction = MathHelper.ToDegrees(fireTask.FireDirection);
-            Assert.AreEqual(direction, 0.0f);
+            Assert.AreEqual(direction, 0f);
         }
 
         [Test]
         public void FireDirectionInitCorrect2()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireActionEmpty.xml");
             var pattern = new BulletPattern();
@@ -186,14 +186,14 @@ namespace Tests.Task.FireTask
 
             Assert.IsNotNull(fireTask);
             float direction = MathHelper.ToDegrees(fireTask.FireDirection);
-            Assert.AreEqual(direction, 90.0f);
+            Assert.AreEqual(direction, 90f);
         }
 
         [Test]
         public void FireDirectionInitCorrect3()
         {
-            TestUtils.Player.Position.X = -100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = -100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\FireActionEmpty.xml");
             var pattern = new BulletPattern();
@@ -329,8 +329,8 @@ namespace Tests.Task.FireTask
             Assert.IsNotNull(bullet1);
             Assert.IsNotNull(bullet2);
 
-            Assert.AreEqual(90f, MathHelper.ToDegrees(bullet1.Direction));
-            Assert.AreEqual(MathHelper.ToDegrees(bullet1.Direction) + 10f, MathHelper.ToDegrees(bullet2.Direction));
+            Assert.AreEqual(90f, MathHelper.ToDegrees(bullet1.Rotation));
+            Assert.AreEqual(MathHelper.ToDegrees(bullet1.Rotation) + 10f, MathHelper.ToDegrees(bullet2.Rotation));
         }
 
         [Test]

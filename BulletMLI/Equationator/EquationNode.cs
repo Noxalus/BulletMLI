@@ -54,7 +54,7 @@ namespace BulletML.Equationator
             if (null == SubEquation)
             {
                 NumberNode fakeNode = new NumberNode();
-                fakeNode.NumberValue = 0.0f;
+                fakeNode.NumberValue = 0f;
                 SubEquation = fakeNode;
             }
             Debug.Assert(null != SubEquation); //TODO: throw exceptions
@@ -99,7 +99,7 @@ namespace BulletML.Equationator
             {
                 //the next node is a number, multiply it by minus one
                 NumberNode myNumberNode = valueNode as NumberNode;
-                myNumberNode.NumberValue *= -1.0f;
+                myNumberNode.NumberValue *= -1f;
             }
             else
             {
@@ -107,7 +107,7 @@ namespace BulletML.Equationator
 
                 //create another equation to multiply that resdult by -1
                 NumberNode negativeOne = new NumberNode();
-                negativeOne.NumberValue = -1.0f;
+                negativeOne.NumberValue = -1f;
                 OperatorNode multiplyNode = new OperatorNode();
                 multiplyNode.Operator = '*';
 

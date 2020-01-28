@@ -44,7 +44,7 @@ namespace BulletML.Equationator
         public NumberNode()
         {
             OrderOfOperationsValue = PemdasValue.Value;
-            _num = 0.0f;
+            _num = 0f;
         }
 
         /// <summary>

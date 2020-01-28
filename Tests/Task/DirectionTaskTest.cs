@@ -17,8 +17,8 @@ namespace Tests.Task
         [Test]
         public void CorrectNumberOfBullets()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
@@ -30,8 +30,8 @@ namespace Tests.Task
         [Test]
         public void CorrectNumberOfBullets1()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
@@ -44,8 +44,8 @@ namespace Tests.Task
         [Test]
         public void CorrectNumberOfBullets2()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
@@ -65,8 +65,8 @@ namespace Tests.Task
         [Test]
         public void CorrectDirection()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -81,17 +81,17 @@ namespace Tests.Task
             for (var i = 1; i < TestUtils.Manager.Movers.Count; i++)
             {
                 var bullet = TestUtils.Manager.Movers[i];
-                var direction = MathHelper.ToDegrees(bullet.Direction);
+                var direction = MathHelper.ToDegrees(bullet.Rotation);
 
-                Assert.AreEqual(90.0f, direction);
+                Assert.AreEqual(90f, direction);
             }
         }
 
         [Test]
         public void SpeedInitializedCorrect()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -109,8 +109,8 @@ namespace Tests.Task
         [Test]
         public void SpeedInitializedCorrect1()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -127,8 +127,8 @@ namespace Tests.Task
         [Test]
         public void SpeedInitializedCorrect2()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -139,14 +139,14 @@ namespace Tests.Task
             var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
-            Assert.AreEqual(1.0f, fireTask.SpeedTask.GetNodeValue(mover));
+            Assert.AreEqual(1f, fireTask.SpeedTask.GetNodeValue(mover));
         }
 
         [Test]
         public void SpeedInitializedCorrect3()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -162,8 +162,8 @@ namespace Tests.Task
         [Test]
         public void SpeedInitializedCorrect4()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -174,14 +174,14 @@ namespace Tests.Task
             var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
-            Assert.AreEqual(1.0f, fireTask.FireSpeed);
+            Assert.AreEqual(1f, fireTask.FireSpeed);
         }
 
         [Test]
         public void CorrectSpeed()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);
@@ -205,8 +205,8 @@ namespace Tests.Task
         [Test]
         public void CorrectSpeed1()
         {
-            TestUtils.Player.Position.X = 100.0f;
-            TestUtils.Player.Position.Y = 0.0f;
+            TestUtils.Player.Position.X = 100f;
+            TestUtils.Player.Position.Y = 0f;
 
             var filename = TestUtils.GetFilePath(@"Content\Aim.xml");
             TestUtils.Pattern.Parse(filename);

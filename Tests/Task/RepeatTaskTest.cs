@@ -69,7 +69,7 @@ namespace Tests.Task
             for (var i = 0; i < 10; i++)
             {
                 var bullet = TestUtils.Manager.Movers[i];
-                var dir = MathHelper.ToDegrees(bullet.Direction);
+                var dir = MathHelper.ToDegrees(bullet.Rotation);
                 Assert.AreEqual(10 * i, dir);
             }
         }
@@ -94,7 +94,7 @@ namespace Tests.Task
             for (var i = 1; i < expectedBulletNumber - 1; i++)
             {
                 var bullet = TestUtils.Manager.Movers[i];
-                var dir = MathHelper.ToDegrees(bullet.Direction);
+                var dir = MathHelper.ToDegrees(bullet.Rotation);
 
                 Assert.AreEqual((118 * i), dir, 10e-3);
             }

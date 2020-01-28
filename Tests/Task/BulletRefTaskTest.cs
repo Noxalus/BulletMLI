@@ -70,7 +70,7 @@ namespace Tests.Task
 
             // Find the task for the BulletRef
             var bulletRefTask = mover.FindTaskByLabelAndName("test", NodeName.bullet);
-            Assert.AreEqual(15.0f, bulletRefTask.Params[0]);
+            Assert.AreEqual(15f, bulletRefTask.Params[0]);
         }
 
         [Test]
@@ -117,7 +117,7 @@ namespace Tests.Task
 
             mover = TestUtils.Manager.Movers[1];
             Assert.AreEqual("test", mover.Label);
-            Assert.AreEqual(15.0f, mover.Speed);
+            Assert.AreEqual(15f, mover.Speed);
         }
     }
 }
