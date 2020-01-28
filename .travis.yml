@@ -14,8 +14,7 @@ deploy:
     - BulletMLI/bin/Release/BulletMLI.dll
     - BulletMLI/bin/Release/BulletMLI.dtd
   skip_cleanup: true
-  draft: true
   on:
     repo: Noxalus/BulletMLI
-    branch: framerate-independant
+    branch: master
     tags: true
