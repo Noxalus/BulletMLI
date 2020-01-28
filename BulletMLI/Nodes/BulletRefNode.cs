@@ -1,7 +1,7 @@
-using BulletML.Enums;
+using BulletMLI.Enums;
 using System;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     public class BulletRefNode : BulletNode
     {

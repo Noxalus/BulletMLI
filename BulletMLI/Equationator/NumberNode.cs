@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// This a node in the equation that holds a number.

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     public class FunctionNode : BaseNode
     {

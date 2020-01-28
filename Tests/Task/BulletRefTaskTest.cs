@@ -1,4 +1,4 @@
-using BulletML.Enums;
+using BulletMLI.Enums;
 using NUnit.Framework;
 using Tests.Utils;
 
@@ -83,7 +83,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             // Find the task for the BulletRef
-            var fireTask = mover.FindTaskByLabelAndName("testFire", NodeName.fire) as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabelAndName("testFire", NodeName.fire) as BulletMLI.Tasks.FireTask;
             Assert.IsNotNull(fireTask);
         }
 
@@ -97,7 +97,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             // Find the task for the BulletRef
-            var fireTask = mover.FindTaskByLabelAndName("testFire", NodeName.fire) as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabelAndName("testFire", NodeName.fire) as BulletMLI.Tasks.FireTask;
             Assert.IsNotNull(fireTask);
             Assert.IsNotNull(fireTask.SpeedTask);
         }

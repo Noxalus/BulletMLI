@@ -1,4 +1,4 @@
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// Function delegate.

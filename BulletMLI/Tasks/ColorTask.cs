@@ -1,9 +1,8 @@
-﻿using BulletML;
-using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This action sets the color of a bullet

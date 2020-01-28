@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// This is a special node for getting random values

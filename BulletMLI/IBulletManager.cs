@@ -1,4 +1,4 @@
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This is the interface that outisde assemblies will use to manage bullets.

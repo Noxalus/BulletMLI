@@ -1,5 +1,5 @@
-using BulletML.Enums;
-using BulletML.Nodes;
+using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using NUnit.Framework;
 
 namespace Tests

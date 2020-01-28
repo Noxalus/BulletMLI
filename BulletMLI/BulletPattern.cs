@@ -1,11 +1,11 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System;
 using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This is a complete document that describes a bullet pattern.
@@ -38,7 +38,7 @@ namespace BulletML
         #region Methods
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BulletML.BulletPattern"/> class.
+        /// Initializes a new instance of the <see cref="BulletMLI.BulletPattern"/> class.
         /// </summary>
         public BulletPattern()
         {
@@ -67,7 +67,7 @@ namespace BulletML
                 DtdProcessing = DtdProcessing.Parse,
                 // Used to load the same DTD file, no matters
                 // where is the BulletML file that we parse
-                XmlResolver = new XmlDtdResolver("bulletml.dtd")
+                XmlResolver = new XmlDtdResolver("BulletMLI.dtd")
             };
 
             settings.ValidationEventHandler += PatternValidationEventHandler;
@@ -106,7 +106,7 @@ namespace BulletML
                 DtdProcessing = DtdProcessing.Ignore,
                 // Used to load the same DTD file, no matters
                 // where is the BulletML file that we parse
-                XmlResolver = new XmlDtdResolver("bulletml.dtd")
+                XmlResolver = new XmlDtdResolver("BulletMLI.dtd")
             };
 
             settings.ValidationEventHandler += PatternValidationEventHandler;
@@ -196,10 +196,12 @@ namespace BulletML
         /// <param name="args">Arguments.</param>
         private static void PatternValidationEventHandler(object sender, ValidationEventArgs args)
         {
-            throw new XmlSchemaException("Error validating BulletML document: " + args.Message,
-                                         args.Exception,
-                                         args.Exception.LineNumber,
-                                         args.Exception.LinePosition);
+            throw new XmlSchemaException(
+                "Error validating BulletML document: " + args.Message,
+                args.Exception,
+                args.Exception.LineNumber,
+                args.Exception.LinePosition
+            );
         }
 
 #endregion Methods

@@ -1,8 +1,8 @@
-using BulletML.Enums;
-using BulletML.Nodes;
+using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This task removes a bullet from the game.

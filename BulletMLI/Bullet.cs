@@ -1,11 +1,11 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
-using BulletML.Tasks;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
+using BulletMLI.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This is the bullet class that outside assemblies will interact with.
@@ -121,7 +121,7 @@ namespace BulletML
         #region Methods
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BulletML.Bullet"/> class.
+        /// Initializes a new instance of the <see cref="BulletMLI.Bullet"/> class.
         /// </summary>
         /// <param name="bulletManager">A bullet manager.</param>
         protected Bullet(IBulletManager bulletManager)

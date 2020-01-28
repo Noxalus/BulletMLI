@@ -1,4 +1,4 @@
-﻿using BulletML;
+﻿using BulletMLI;
 
 namespace Tests.Utils
 {

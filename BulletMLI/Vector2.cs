@@ -4,7 +4,7 @@
 using System;
 using System.Diagnostics;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// Describes a 2D-vector.

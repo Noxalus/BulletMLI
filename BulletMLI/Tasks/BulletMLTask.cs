@@ -1,10 +1,10 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This is a task.

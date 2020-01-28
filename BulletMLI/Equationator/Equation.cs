@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// This is the main class of teh Equationator.

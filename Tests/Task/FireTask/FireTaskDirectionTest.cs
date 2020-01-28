@@ -1,4 +1,4 @@
-using BulletML;
+using BulletMLI;
 using NUnit.Framework;
 using Tests.Utils;
 

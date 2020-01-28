@@ -1,4 +1,4 @@
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// All the different types of values that might be stored in a Token object

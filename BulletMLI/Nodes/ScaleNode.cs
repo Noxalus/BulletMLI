@@ -1,6 +1,6 @@
-﻿using BulletML.Enums;
+﻿using BulletMLI.Enums;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     public class ScaleNode : BulletMLNode
     {

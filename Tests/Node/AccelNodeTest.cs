@@ -1,6 +1,6 @@
-﻿using BulletML;
-using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI;
+using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using NUnit.Framework;
 using System.IO;
 using Tests.Utils;

@@ -1,9 +1,9 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This task changes the speed a little bit every frame.

@@ -1,9 +1,8 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
-using BulletML;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This task adds acceleration to a bullet.

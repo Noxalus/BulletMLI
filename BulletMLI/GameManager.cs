@@ -1,4 +1,4 @@
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This thing manages a few gameplay variables that used by the BulletML library

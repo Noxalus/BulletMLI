@@ -1,4 +1,4 @@
-﻿namespace BulletML
+﻿namespace BulletMLI
 {
     /// <summary>
     /// This is a callback method for getting a position

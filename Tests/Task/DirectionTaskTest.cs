@@ -1,4 +1,4 @@
-using BulletML;
+using BulletMLI;
 using NUnit.Framework;
 using Tests.Utils;
 
@@ -100,7 +100,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             // Get the fire task
-            var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabel("fireTask") as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.IsNotNull(fireTask.SpeedTask);
@@ -118,7 +118,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabel("fireTask") as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.IsNotNull(fireTask.SpeedTask);
@@ -136,7 +136,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabel("fireTask") as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.AreEqual(1f, fireTask.SpeedTask.GetNodeValue(mover));
@@ -154,7 +154,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            BulletML.Tasks.FireTask fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask fireTask = mover.FindTaskByLabel("fireTask") as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
         }
@@ -171,7 +171,7 @@ namespace Tests.Task
             var mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
-            var fireTask = mover.FindTaskByLabel("fireTask") as BulletML.Tasks.FireTask;
+            var fireTask = mover.FindTaskByLabel("fireTask") as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.AreEqual(1f, fireTask.FireSpeed);

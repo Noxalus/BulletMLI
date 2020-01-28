@@ -7,8 +7,8 @@
     <ProjectGuid>{B7092DB7-57E9-455C-B974-CDC1E0F49518}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BulletML</RootNamespace>
-    <AssemblyName>BulletML</AssemblyName>
+    <RootNamespace>BulletMLI</RootNamespace>
+    <AssemblyName>BulletMLI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bullet.cs" />
-    <Compile Include="BulletMLEquation.cs" />
+    <Compile Include="BulletMLIEquation.cs" />
     <Compile Include="BulletPattern.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="Configuration.cs" />
@@ -119,12 +119,9 @@
     <Compile Include="XmlDtdResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bulletml.dtd">
+    <None Include="BulletMLI.dtd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

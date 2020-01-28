@@ -1,8 +1,8 @@
-using BulletML.Enums;
+using BulletMLI.Enums;
 using System;
 using System.Diagnostics;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     public class FireRefNode : FireNode
     {

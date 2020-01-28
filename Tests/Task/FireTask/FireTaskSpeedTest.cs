@@ -1,5 +1,5 @@
-using BulletML.Enums;
-using BulletML.Nodes;
+using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using NUnit.Framework;
 using Tests.Utils;
 
@@ -41,7 +41,7 @@ namespace Tests.Task.FireTask
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.IsNull(fireTask.SpeedTask);
@@ -59,11 +59,11 @@ namespace Tests.Task.FireTask
             mover.Speed = 100f;
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
 
-            var fireTask2 = new BulletML.Tasks.FireTask(fireTask.Node as FireNode, fireTask);
+            var fireTask2 = new BulletMLI.Tasks.FireTask(fireTask.Node as FireNode, fireTask);
             fireTask2.InitTask(mover);
 
             Assert.IsNull(fireTask2.SpeedTask);
@@ -133,7 +133,7 @@ namespace Tests.Task.FireTask
             TestUtils.MoverManagerStep();
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.AreEqual(105f, fireTask.FireSpeed);
@@ -184,7 +184,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.AreEqual(NodeType.sequence, fireTask.SpeedTask.Node.NodeType);
@@ -201,7 +201,7 @@ namespace Tests.Task.FireTask
             mover.Speed = 100;
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.IsNotNull(fireTask.SpeedTask);
@@ -221,7 +221,7 @@ namespace Tests.Task.FireTask
             mover.InitTopNode(TestUtils.Pattern.RootNode);
 
             var myTask = mover.Tasks[0];
-            var fireTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            var fireTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(fireTask);
             Assert.AreEqual(105f, fireTask.FireSpeed);

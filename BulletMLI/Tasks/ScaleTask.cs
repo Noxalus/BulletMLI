@@ -1,7 +1,7 @@
-﻿using BulletML.Nodes;
+﻿using BulletMLI.Nodes;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This action sets the velocity of a bullet

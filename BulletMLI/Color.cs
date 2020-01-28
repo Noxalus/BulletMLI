@@ -6,7 +6,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.Diagnostics;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// Describes a 32-bit packed color.

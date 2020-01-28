@@ -1,4 +1,4 @@
-namespace BulletML.Enums
+namespace BulletMLI.Enums
 {
     /// <summary>
     /// These are used for tasks during runtime.

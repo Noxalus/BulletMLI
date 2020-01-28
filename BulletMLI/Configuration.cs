@@ -1,4 +1,4 @@
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// Store data that can change the way patterns are interpreted

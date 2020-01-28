@@ -1,8 +1,8 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System.Diagnostics;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// This task pauses for a specified amount of time before resuming.

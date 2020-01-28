@@ -1,7 +1,7 @@
-using BulletML.Enums;
+using BulletMLI.Enums;
 using System;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     /// <summary>
     /// This is a simple class used to create different types of nodes.

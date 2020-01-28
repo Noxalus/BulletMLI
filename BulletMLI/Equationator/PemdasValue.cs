@@ -1,4 +1,4 @@
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// Enum used to sort out the equation tree by order of operations.

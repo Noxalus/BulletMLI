@@ -1,10 +1,10 @@
-﻿using BulletML.Enums;
-using BulletML.Tasks;
+﻿using BulletMLI.Enums;
+using BulletMLI.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Xml;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     /// <summary>
     /// This is a single node from a BulletML document.
@@ -36,7 +36,7 @@ namespace BulletML.Nodes
         /// An equation used to get a value of this node.
         /// </summary>
         /// <value>The node value.</value>
-        private readonly BulletMLEquation _nodeEquation = new BulletMLEquation();
+        private readonly BulletMLIEquation _nodeEquation = new BulletMLIEquation();
 
         /// <summary>
         /// A list of all the child nodes for this node.

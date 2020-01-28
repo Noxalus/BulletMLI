@@ -1,10 +1,10 @@
-﻿using BulletML.Enums;
-using BulletML.Nodes;
+﻿using BulletMLI.Enums;
+using BulletMLI.Nodes;
 using System;
 using System.Diagnostics;
 using System.IO;
 
-namespace BulletML.Tasks
+namespace BulletMLI.Tasks
 {
     /// <summary>
     /// A task to shoot a bullet

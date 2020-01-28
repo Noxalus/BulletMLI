@@ -1,21 +1,21 @@
-using BulletML.Equationator;
+using BulletMLI.Equationator;
 using System;
 using System.Diagnostics;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This is an equation used in BulletML nodes.
     /// This is an easy way to set up the grammar for all our equations.
     /// </summary>
-    public class BulletMLEquation : Equation
+    public class BulletMLIEquation : Equation
     {
         /// <summary>
         /// A randomizer for getting random values.
         /// </summary>
         private static readonly Random Random = new Random(DateTime.Now.Millisecond);
 
-        public BulletMLEquation()
+        public BulletMLIEquation()
         {
             // Add the specific functions we will use for BulletML grammar.
             AddFunction("rand", RandomValue);

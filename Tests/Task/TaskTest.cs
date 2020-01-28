@@ -1,5 +1,5 @@
-using BulletML;
-using BulletML.Enums;
+using BulletMLI;
+using BulletMLI.Enums;
 using NUnit.Framework;
 using Tests.Utils;
 

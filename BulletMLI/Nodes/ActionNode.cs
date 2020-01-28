@@ -1,8 +1,8 @@
-using BulletML.Enums;
-using BulletML.Tasks;
+using BulletMLI.Enums;
+using BulletMLI.Tasks;
 using System;
 
-namespace BulletML.Nodes
+namespace BulletMLI.Nodes
 {
     /// <summary>
     /// action node... also the base class for actionref nodes

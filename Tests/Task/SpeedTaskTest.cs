@@ -1,6 +1,6 @@
-using BulletML.Enums;
-using BulletML.Nodes;
-using BulletML.Tasks;
+using BulletMLI.Enums;
+using BulletMLI.Nodes;
+using BulletMLI.Tasks;
 using NUnit.Framework;
 using Tests.Utils;
 
@@ -61,7 +61,7 @@ namespace Tests.Task
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
             Assert.AreEqual(1, myTask.ChildTasks.Count);
-            Assert.IsTrue(myTask.ChildTasks[0] is BulletML.Tasks.FireTask);
+            Assert.IsTrue(myTask.ChildTasks[0] is BulletMLI.Tasks.FireTask);
         }
 
         [Test]
@@ -72,7 +72,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(testTask.Node);
             Assert.IsTrue(testTask.Node.Name == NodeName.fire);
@@ -86,7 +86,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.AreEqual(1, testTask.ChildTasks.Count);
         }
@@ -99,7 +99,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(testTask.SpeedTask);
         }
@@ -112,7 +112,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsTrue(testTask.SpeedTask is SpeedTask);
         }
@@ -125,7 +125,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
 
             Assert.IsNotNull(speedTask.Node);
@@ -139,7 +139,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
 
             Assert.IsTrue(speedTask.Node is SpeedNode);
@@ -153,7 +153,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
@@ -168,7 +168,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
@@ -183,7 +183,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.AreEqual(5f, testTask.FireSpeed);
         }
@@ -196,7 +196,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.AreEqual(5f, testTask.FireSpeed);
         }
@@ -209,7 +209,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsNotNull(testTask.SpeedTask);
         }
@@ -222,7 +222,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.IsTrue(testTask.SpeedTask is SpeedTask);
         }
@@ -235,7 +235,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
 
             Assert.IsNotNull(speedTask.Node);
@@ -249,7 +249,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
 
             Assert.IsTrue(speedTask.Node is SpeedNode);
@@ -263,7 +263,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
@@ -278,7 +278,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
             SpeedTask speedTask = testTask.SpeedTask as SpeedTask;
             SpeedNode speedNode = speedTask.Node as SpeedNode;
 
@@ -293,7 +293,7 @@ namespace Tests.Task
             Mover mover = (Mover)TestUtils.Manager.CreateBullet();
             mover.InitTopNode(TestUtils.Pattern.RootNode);
             BulletMLTask myTask = mover.Tasks[0];
-            BulletML.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletML.Tasks.FireTask;
+            BulletMLI.Tasks.FireTask testTask = myTask.ChildTasks[0] as BulletMLI.Tasks.FireTask;
 
             Assert.AreEqual(10f, testTask.FireSpeed);
         }

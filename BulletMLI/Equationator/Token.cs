@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace BulletML.Equationator
+namespace BulletMLI.Equationator
 {
     /// <summary>
     /// This is a single text token from an equation.

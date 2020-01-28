@@ -3,11 +3,11 @@ using System.IO;
 using System.Reflection;
 using System.Xml;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// This class is used to load the DTD file copied from this library,
-    /// no matter the BulletML file's location during parsing.
+    /// no matter the BulletMLI file's location during parsing.
     /// </summary>
     internal class XmlDtdResolver : XmlUrlResolver
     {

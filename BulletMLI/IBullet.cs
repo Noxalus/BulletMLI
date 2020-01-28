@@ -1,8 +1,8 @@
-﻿using BulletML.Nodes;
-using BulletML.Tasks;
+﻿using BulletMLI.Nodes;
+using BulletMLI.Tasks;
 using System.Collections.Generic;
 
-namespace BulletML
+namespace BulletMLI
 {
     /// <summary>
     /// If you want a thing to be bullet-like, you can inherit from this interface.
