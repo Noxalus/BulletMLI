@@ -2,7 +2,7 @@ language: csharp
 solution: BulletMLI.sln
 install:
   - nuget restore BulletMLI.sln
-  - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 3.10.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release Tests/Tests.csproj
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
