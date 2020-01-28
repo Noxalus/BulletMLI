@@ -1,8 +1,18 @@
 language: csharp
 solution: BulletMLI.sln
 install:
-  - nuget restore BulletMLI.sln
-  - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
+- nuget restore BulletMLI.sln
+- nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release Tests/Tests.csproj
-  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+- xbuild /p:Configuration=Release Tests/Tests.csproj
+- mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+deploy:
+  provider: releases
+  api_key:
+    secure: t27n2G25Z8B/9hJjDFPam4OJSePAjGwWZ2KD/5TEJ0ZLs7gbN/kz+vgq/cqlCfShq2m/m8jaijmgeJzjhAWI2Y6DEU9JPqQWblKNTh9stYhRVvZlKUL+NsgKZgTUbEtN3DAsPeLSgIQtLl07GN0nquOQfWLtVHC+0XH/zXlgua8atpOpOAixkmGJZ8zUKpR54YuF578Jhq48VTKrRZl9vgmDeNeTT5iLSzzHmPtCUOhQmHq6CR0Vv1I/Ki+GwpsBQbG4IQeTgC0MfqLa4DoiWaPRj2BskD0r9ik92bbgipYnNiML+OO7TkEeGk6xloOFiQKiR3iGVMuiVdXFxkJDtLKwINu8qFVFmVclooy1/6Hwvh5CFY2tv/pMkYVZ1zoogpsmuvkQhBF7o1nQDS7pUM4h76Nb+mkwXDnzZb/JG7Kf+9Uxrpmm/el46YXnyactg3k5qWUuB7fAep47F98CU/eex7TMbmP+PheoLQl8V87EKQWEVgxWh3RlgJm0+J3gT78u0x9h8Cxco1abyyystgyM/JGo5iAOh+MDG6d2PUIAnQt0ceEN48/LuZXdtPZ6cE0U76ICv+rmCFUsRxMLZBFHuNPsT5k2zYuz1qTHTrX3ej1tOe0eIxqxm86DDufT96FuNwyse3lxZH9Yyk40Zdu//Lu7I2KpzyaUArWKreo=
+  file: BulletMLI/bin/Release/BulletMLI.dll
+  skip_cleanup: true
+  draft: true
+  on:
+    repo: Noxalus/BulletMLI
+    branch: framerate-independant
