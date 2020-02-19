@@ -32,6 +32,12 @@ namespace BulletMLI.Tasks
         public float FireScale { get; private set; }
 
         /// <summary>
+        /// The sprite index used to display this bullet.
+        /// </summary>
+        /// <value>The sprite index.</value>
+        public short SpriteIndex { get; private set; }
+
+        /// <summary>
         /// If this fire node shoots from a bullet/bulletRef node, this will be a task created for it.
         /// This is needed so the params of the bulletRef can be set correctly.
         /// </summary>
@@ -54,7 +60,7 @@ namespace BulletMLI.Tasks
         /// The node we are going to use to set the sprite index of any bullets shot with this task.
         /// </summary>
         /// <value>The sprite node.</value>
-        public SpriteTask SpriteTask { get; private set; }
+        public SpriteTask SpriteTask { get; private set; }     
 
         /// <summary>
         /// The node we are going to use to set the scale of any bullets shot with this task.
@@ -271,6 +277,11 @@ namespace BulletMLI.Tasks
             _lastSetupDirection = FireDirection;
             _lastSetupSpeed = FireSpeed;
             _lastSetupScale = FireScale;
+
+            if (SpriteTask != null)
+            {
+                SpriteIndex = (short)SpriteTask.GetNodeValue(bullet);
+            }
         }
 
         /// <summary>
@@ -299,7 +310,7 @@ namespace BulletMLI.Tasks
 
             // Set the new bullet's sprite index
             if (SpriteTask != null)
-                newBullet.SpriteIndex = (short)SpriteTask.GetNodeValue(bullet);
+                newBullet.SpriteIndex = SpriteIndex;
 
             // Store the new bullet's direction and speed for the sequence type
             _lastFireDirection = FireDirection;
